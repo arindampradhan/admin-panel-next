@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/globals.css';
 import type { AppProps, NextWebVitalsMetric } from 'next/app';
 import { appWithTranslation } from 'next-i18next';
-import { wrapper } from '@/store';
+import { wrapper } from '../store';
 
 export function reportWebVitals(metric: NextWebVitalsMetric) {
   const DEBUG_WEB_VITALS = 0;
