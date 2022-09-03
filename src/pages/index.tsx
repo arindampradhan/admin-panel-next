@@ -1,9 +1,16 @@
+import React, { useEffect } from 'react';
 import type { NextPage, GetStaticProps } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
 import CodeEditor from '../BusinessComponents/Editor/CodeEditor';
+import { useCookies } from 'react-cookie';
 
 const RootPage: NextPage = () => {
+  const [cookies, setCookie] = useCookies(['NEXT_COOKIE']);
+
+  useEffect(() => {
+    setCookie('NEXT_LOCALE', 'en', { path: '/' });
+  }, []);
+
   return (
     <div>
       <Head>
