@@ -4,6 +4,7 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import React from 'react';
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {

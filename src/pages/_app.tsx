@@ -9,6 +9,7 @@ import BaseLayout from '../components/Layouts/BaseLayout';
 
 export function reportWebVitals(metric: NextWebVitalsMetric) {
   const DEBUG_WEB_VITALS = 0;
+  // eslint-disable-next-line no-console
   DEBUG_WEB_VITALS && console.log(metric);
 }
 
