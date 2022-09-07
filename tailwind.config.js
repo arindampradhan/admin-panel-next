@@ -12,7 +12,15 @@ module.exports = {
     fontFamily: {
       sans: ['Chillax', ...defaultTheme.fontFamily.sans]
     },
-    extend: {},
+    extend: {
+      spacing: {
+        '2px': '2px',
+        '6px': '6px'
+      },
+      transitionDuration: {
+        0: '0ms'
+      }
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
