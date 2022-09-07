@@ -1,15 +1,14 @@
 import React from 'react';
-import Button from '../components/Button';
 import Background from '../components/Background';
-import Badge from '../components/Badge';
+import Lozenge from '../components/Lozenge';
 
 const DesignSystem = () => {
   return (
-    <div>
-      <Background className="">
-        <Badge appearance="removed" max={10}>
-          {18}
-        </Badge>
+    <div className="bg-white">
+      <Background>
+        <Lozenge appearance="moved" isBold>
+          Default BOLD
+        </Lozenge>
       </Background>
     </div>
   );

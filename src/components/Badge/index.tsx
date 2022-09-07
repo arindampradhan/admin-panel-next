@@ -37,10 +37,7 @@ export const Badge: React.FC<BadgeProps> = ({ children, appearance, max }) => {
 
   return (
     <span
-      className={
-        '  relative inline-flex appearance-none  rounded-lg border-none  px-[6px] py-[2px] font-normal ' +
-        appearanceBehaviour[appearance]
-      }
+      className={`relative inline-flex appearance-none  rounded-lg border-none  px-[6px] py-[2px] font-normal ${appearanceBehaviour[appearance]}`}
     >
       <span className="box-border text-center text-xs leading-3">
         {children}

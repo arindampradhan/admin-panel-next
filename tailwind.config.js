@@ -35,7 +35,8 @@ module.exports = {
       green: atlasianColors.green,
       blue: atlasianColors.blue,
       yellow: atlasianColors.yellow,
-      teal: atlasianColors.teal
+      teal: atlasianColors.teal,
+      purple: atlasianColors.purple
     }
   },
   plugins: [require('@tailwindcss/typography')]

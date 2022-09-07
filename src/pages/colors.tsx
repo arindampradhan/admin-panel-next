@@ -101,7 +101,7 @@ const ColorsPage: NextPage = () => {
             <PalletGroups colors={tealPallets} />
           </div>
           <div className="py-2">
-            <h1 className="pb-2 text-2xl">Green palette</h1>
+            <h1 className="pb-2 text-2xl">Purple palette</h1>
             <PalletGroups colors={purplePallets} />
           </div>
         </section>
