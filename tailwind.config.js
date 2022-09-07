@@ -13,6 +13,9 @@ module.exports = {
       sans: ['Chillax', ...defaultTheme.fontFamily.sans]
     },
     extend: {
+      flex: {
+        0: '0 0 auto'
+      },
       spacing: {
         '2px': '2px',
         '6px': '6px'
