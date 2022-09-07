@@ -8,7 +8,7 @@ type BannerProps = {
 
 export const Banner: React.FC<BannerProps> = ({
   children,
-  appearance,
+  appearance = 'default',
   icon
 }) => {
   const appearanceBehaviour = {
