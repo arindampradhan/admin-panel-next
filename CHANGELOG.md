@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/arindampradhan/admin-panel-next/compare/v0.1.3...v0.1.4) (2022-09-08)
+
+### Features
+
+- add banner component ([19af17a](https://github.com/arindampradhan/admin-panel-next/commit/19af17a7e7edc5ae74c434e6944ea80c5f6fd8f1))
+- add button and badge component ([f1e2698](https://github.com/arindampradhan/admin-panel-next/commit/f1e26986f8b974db4b0021b860112bdeb9c54748))
+- add lozenge component ([fa8498a](https://github.com/arindampradhan/admin-panel-next/commit/fa8498a8f738ad045f7d976c2638bfd59b7fbdb2))
+- add multiple fonts, typography support tailwind, tailwind plugins ([13ce012](https://github.com/arindampradhan/admin-panel-next/commit/13ce012050632ef2518d1c2342e0c64dcb5d8bf6))
+- add tag component and it's example ([0f9122b](https://github.com/arindampradhan/admin-panel-next/commit/0f9122bdce1653ac8381e4870032a0c40ad478df))
+- add theme of atlassian ([3066002](https://github.com/arindampradhan/admin-panel-next/commit/30660028e3f552b7a6cfad2bdb5227ed5d1981c4))
+
+### Bug Fixes
+
+- add default in param ([1434d8b](https://github.com/arindampradhan/admin-panel-next/commit/1434d8ba44957024c9ae6d89ea713f72ad7d9362))
+- add emptystate component ([71aa6c6](https://github.com/arindampradhan/admin-panel-next/commit/71aa6c6852007ffe1b88950b89bf8767b9a6481c))
+
 ### [0.1.3](https://github.com/arindampradhan/admin-panel-next/compare/v0.1.2...v0.1.3) (2022-09-02)
 
 ### Features
