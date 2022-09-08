@@ -1,20 +1,50 @@
 import React from 'react';
 import Background from '../components/Background';
-import EmptyState from '../components/EmptyState';
-import Button from '../components/Button';
+import { SimpleTag as Tag, TagGroup } from '../components/Tag';
 
 const DesignSystem = () => {
   return (
     <div>
-      <Background>
-        <EmptyState
-          header="You don't have access to this issue"
-          description="Make sure the issue exists in this project. If it does, ask a project admin for permission to see the project's issues."
-          primaryAction={<Button>View permission</Button>}
-          tertiaryAction={<Button appearance="link">Learn more</Button>}
-          imageUrl="https://atlassian.design/static/LockClosed-18281e85ee8523db807bb04889ceaac8.png"
-          width="narrow"
-        />
+      <Background className="bg-white">
+        <TagGroup>
+          <Tag
+            href="/a/purpleLight"
+            text="href:purpleLight Tag"
+            color="purpleLight"
+            appearance="default"
+          />
+          <Tag
+            text="redLight Tag"
+            color="redLight"
+            appearance="default"
+            isRemovable
+          />
+          <Tag
+            href="/a/redLight"
+            text="href:redLight Tag"
+            color="redLight"
+            appearance="default"
+            removeButtonLabel="Remove"
+          />
+          <Tag
+            text="yellowLight Tag"
+            color="yellowLight"
+            appearance="default"
+          />
+          <Tag
+            href="/a/yellowLight"
+            text="href:yellowLight Tag"
+            color="yellowLight"
+            appearance="default"
+          />
+          <Tag text="greyLight Tag" color="greyLight" appearance="default" />
+          <Tag
+            href="/a/greyLight"
+            text="href:greyLight Tag"
+            color="greyLight"
+            appearance="default"
+          />
+        </TagGroup>
       </Background>
     </div>
   );
