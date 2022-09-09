@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/arindampradhan/admin-panel-next/compare/v0.1.4...v0.1.5) (2022-09-09)
+
+
+### Features
+
+* add Breadcrumbs ([5c72e51](https://github.com/arindampradhan/admin-panel-next/commit/5c72e5153db9409291e85432294c267dfea11791))
+
+
+### Bug Fixes
+
+* build issue, stablizing the build ([00d441b](https://github.com/arindampradhan/admin-panel-next/commit/00d441b26ac0ccc080dd44f98981766286d24c70))
+* button behaviour with rest props ([efc8750](https://github.com/arindampradhan/admin-panel-next/commit/efc8750042d09db99bd710024bc8b0d6321c8e4d))
+
 ### [0.1.4](https://github.com/arindampradhan/admin-panel-next/compare/v0.1.3...v0.1.4) (2022-09-08)
 
 ### Features
