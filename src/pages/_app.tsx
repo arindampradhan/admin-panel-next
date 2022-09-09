@@ -5,7 +5,6 @@ import App, { AppContext } from 'next/app';
 import { appWithTranslation } from 'next-i18next';
 import { wrapper } from '../store';
 import { CookiesProvider } from 'react-cookie';
-import BaseLayout from '../components/Layouts/BaseLayout';
 
 export function reportWebVitals(metric: NextWebVitalsMetric) {
   const DEBUG_WEB_VITALS = 0;
@@ -16,9 +15,7 @@ export function reportWebVitals(metric: NextWebVitalsMetric) {
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <CookiesProvider>
-      <BaseLayout>
-        <Component {...pageProps} />
-      </BaseLayout>
+      <Component {...pageProps} />
     </CookiesProvider>
   );
 }

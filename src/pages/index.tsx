@@ -7,7 +7,7 @@ const RootPage: NextPage = () => {
   const [cookies, setCookie] = useCookies(['NEXT_COOKIE']);
 
   useEffect(() => {
-    setCookie('NEXT_LOCALE', 'en', { path: '/' });
+    // setCookie('NEXT_LOCALE', 'en', { path: '/' });
   }, [setCookie]);
 
   return (
@@ -20,7 +20,7 @@ const RootPage: NextPage = () => {
       <main>
         <button
           type="button"
-          className="to-pink-500px-4 from-indigo-500 via-purple-500 rounded-lg bg-gradient-to-r py-2 "
+          className="to-pink-500px-4 from-indigo-500 rounded-lg bg-gradient-to-r via-purple-500 py-2 "
         >
           Hover me
         </button>

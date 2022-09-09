@@ -5,8 +5,8 @@ type PageProps = {
   children: React.ReactNode;
 };
 
-export const BaseLayout: NextPage = ({ children }: PageProps) => {
-  return <div>{children}</div>;
+export const BaseLayout: React.FC<PageProps> = ({ children }) => {
+  return <div className="block">{children}</div>;
 };
 
 export default BaseLayout;

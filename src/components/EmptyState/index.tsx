@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import Button from '../Button';
 
@@ -34,7 +35,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({
   };
   return (
     <div className={`mx-auto my-12 text-center ${widthBehaviour[width]}`}>
-      {customImage || (
+      {customImage ? (
         <img
           src={imageUrl}
           style={{
@@ -45,7 +46,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({
           alt="preview-state"
           role="presentation"
         />
-      )}
+      ) : null}
       <h4 className="mb-4 text-xl leading-6 text-primarydark">{header}</h4>
       <p className="mb-6 mt-0 text-primarydark">{description}</p>
       <div className="mb-2 flex items-center justify-center gap-1">

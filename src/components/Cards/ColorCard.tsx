@@ -45,7 +45,7 @@ const TextBox: React.FC<TextBoxProps> = ({ isPass, inverted, small }) => (
 );
 
 export const ColorCard: React.FC<ComponentProps> = ({ hex, name }) => {
-  const rgb = hexToRgb(hex);
+  const rgb: any = hexToRgb(hex);
   return (
     <div className="block w-64 rounded-md  bg-lightneutral-200 antialiased dark:bg-darkneutral-500">
       <div

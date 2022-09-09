@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { version, name } from '../../../package.json';
+import pkg from '../../../package.json';
 
 type Data = {
   name: string;
@@ -12,7 +12,7 @@ export default function handler(
   res: NextApiResponse<Data>
 ) {
   res.status(200).json({
-    name,
-    version
+    name: pkg.name,
+    version: pkg.version
   });
 }

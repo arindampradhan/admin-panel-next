@@ -1,7 +1,7 @@
 import React from 'react';
 
 type AvatarProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 export const Avatar: React.FC<AvatarProps> = props => {
   return <div>Avatar</div>;

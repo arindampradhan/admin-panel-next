@@ -19,11 +19,6 @@
       "@/components/*": ["./src/components/*"]
     }
   },
-  "include": [
-    "src/next-env.d.ts",
-    "src/additional.d.ts",
-    "src/**/*.ts",
-    "src/`**/*.tsx"
-  ],
+  "include": ["next-env.d.ts", "src/additional.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", ".next", ".vercel", "out"]
 }

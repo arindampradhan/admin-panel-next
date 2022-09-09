@@ -1,5 +1,7 @@
+/* eslint-disable @next/next/no-css-tags */
 import { Html, Head, Main, NextScript } from 'next/document';
 import React from 'react';
+import { BaseLayout } from '../components/Layouts/BaseLayout';
 
 export default function Document() {
   return (
@@ -27,7 +29,9 @@ export default function Document() {
         <link rel="stylesheet" href="/fonts/Poppins/poppins.css" />
       </Head>
       <body>
-        <Main />
+        <BaseLayout>
+          <Main />
+        </BaseLayout>
         <NextScript />
       </body>
     </Html>

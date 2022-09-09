@@ -8,7 +8,8 @@ const RootPage: NextPage = () => {
   const [cookies, setCookie] = useCookies(['NEXT_COOKIE']);
 
   useEffect(() => {
-    setCookie('NEXT_LOCALE', 'en', { path: '/' });
+    // const localeKey = 'NEXT_LOCALE';
+    // setCookie(localeKey, 'en', { path: '/' });
   }, [setCookie]);
 
   return (
