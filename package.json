@@ -10,12 +10,9 @@
     "release": "standard-version"
   },
   "dependencies": {
-    "@atlaskit/tag": "^11.4.0",
-    "@atlaskit/tag-group": "^10.1.0",
     "@faker-js/faker": "^7.5.0",
     "@monaco-editor/react": "^4.4.5",
     "@reduxjs/toolkit": "^1.8.5",
-    "add": "^2.0.6",
     "date-fns": "^2.29.2",
     "lodash": "^4.17.21",
     "next": "12.2.5",

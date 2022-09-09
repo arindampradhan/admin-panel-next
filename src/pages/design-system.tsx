@@ -1,50 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Background from '../components/Background';
-import { SimpleTag as Tag, TagGroup } from '../components/Tag';
+import { Breadcrumbs, BreadcrumbsItem } from '../components/Breadcrumbs';
+import Button from '../components/Button';
 
 const DesignSystem = () => {
+  const [isExpanded, setExpanse] = useState(false);
+
   return (
     <div>
       <Background className="bg-white">
-        <TagGroup>
-          <Tag
-            href="/a/purpleLight"
-            text="href:purpleLight Tag"
-            color="purpleLight"
-            appearance="default"
-          />
-          <Tag
-            text="redLight Tag"
-            color="redLight"
-            appearance="default"
-            isRemovable
-          />
-          <Tag
-            href="/a/redLight"
-            text="href:redLight Tag"
-            color="redLight"
-            appearance="default"
-            removeButtonLabel="Remove"
-          />
-          <Tag
-            text="yellowLight Tag"
-            color="yellowLight"
-            appearance="default"
-          />
-          <Tag
-            href="/a/yellowLight"
-            text="href:yellowLight Tag"
-            color="yellowLight"
-            appearance="default"
-          />
-          <Tag text="greyLight Tag" color="greyLight" appearance="default" />
-          <Tag
-            href="/a/greyLight"
-            text="href:greyLight Tag"
-            color="greyLight"
-            appearance="default"
-          />
-        </TagGroup>
+        <Breadcrumbs
+          maxItems={1}
+          itemsBeforeCollapse={1}
+          itemsAfterCollapse={3}
+          isExpanded={isExpanded}
+          onExpand={() => setExpanse(!isExpanded)}
+        >
+          <BreadcrumbsItem href="/item" text="Item 1" />
+          <BreadcrumbsItem href="/item" text="Item 2" />
+          <BreadcrumbsItem href="/item" text="Item 3" />
+          <BreadcrumbsItem href="/item" text="Item 4" />
+          <BreadcrumbsItem href="/item" text="Item 5" />
+          <BreadcrumbsItem href="/item" text="Item 6" />
+          <BreadcrumbsItem href="/item" text="Item 7" />
+          <BreadcrumbsItem href="/item" text="Item 8" />
+          <BreadcrumbsItem href="/item" text="Item 9" />
+          <BreadcrumbsItem href="/item" text="Item 10" />
+        </Breadcrumbs>
+        <Button appearance="primary" onClick={() => setExpanse(!isExpanded)}>
+          Toggle
+        </Button>
       </Background>
     </div>
   );
