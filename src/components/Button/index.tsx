@@ -19,6 +19,7 @@ type ButtonProps = {
   spacing?: 'default' | 'compact' | 'none';
   className?: string;
   shouldFitContainer?: boolean;
+  [rest: string]: any;
 };
 
 interface Behaviour {
@@ -34,12 +35,13 @@ interface Behaviour {
 
 const Button: React.FC<ButtonProps> = ({
   children,
-  appearance,
+  appearance = 'default',
   isSelected,
   isLoading,
-  className,
-  spacing,
-  shouldFitContainer
+  className = '',
+  spacing = 'default',
+  shouldFitContainer = false,
+  ...rest
 }) => {
   const textBehaviour: Behaviour = {
     primary: '',
@@ -93,25 +95,20 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
-      className={`inline-flex cursor-pointer items-baseline rounded-[3px] border-0 text-center align-middle font-normal  transition-all ${disabledClass}  ${
-        className || ''
-      } ${spacingBehaviour} ${spacingBehaviour[spacing]} ${
+      className={`inline-flex cursor-pointer items-baseline rounded-[3px] border-0 text-center align-middle font-normal  transition-all ${disabledClass} ${className} ${spacingBehaviour} ${
+        spacingBehaviour[spacing]
+      } ${
         isSelected ? buttonBehaviour['selected'] : buttonBehaviour[appearance]
       } ${
         shouldFitContainer
           ? containerBehaviour.fullFit
           : containerBehaviour.default
       }`}
+      {...rest}
     >
       <Text>{children}</Text>
     </button>
   );
-};
-
-Button.defaultProps = {
-  appearance: 'default',
-  spacing: 'default',
-  shouldFitContainer: false
 };
 
 export default Button;
