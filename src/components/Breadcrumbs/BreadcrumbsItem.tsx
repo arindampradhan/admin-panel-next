@@ -16,6 +16,7 @@ type CustomTagProps = {
   type: 'button' | 'link';
   children: React.ReactNode;
   className: string;
+  style?: any;
   [rest: string]: any;
 };
 
@@ -46,7 +47,7 @@ export const BreadcrumbsItem: React.FC<ItemsProps> = ({
   iconBefore,
   iconAfter,
   onClick,
-  truncationWidth,
+  truncationWidth = 200,
   target = '_blank',
   type = 'link'
 }) => {
@@ -56,6 +57,7 @@ export const BreadcrumbsItem: React.FC<ItemsProps> = ({
     <li className='box-border flex h-7 max-w-full flex-row after:w-auto after:shrink-0 after:px-2 after:py-0 after:text-center after:no-underline after:content-["/"]'>
       {/* TODO: last element remove style of content */}
       <CustomTag
+        style={{ maxWidth: `${truncationWidth}px` }}
         onClick={onClick}
         type={type}
         href={type == 'link' ? href : null}
