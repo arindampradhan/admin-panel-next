@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/arindampradhan/admin-panel-next/compare/v0.1.4...v0.1.6) (2022-09-10)
+
+
+### Features
+
+* add avatar design ([86f6c51](https://github.com/arindampradhan/admin-panel-next/commit/86f6c51ce21654df8376f961a9045999dcb931fb))
+* add Breadcrumbs ([5c72e51](https://github.com/arindampradhan/admin-panel-next/commit/5c72e5153db9409291e85432294c267dfea11791))
+* add sectionmessage ([b3adc15](https://github.com/arindampradhan/admin-panel-next/commit/b3adc15ede5fb50247d950753ba5668fe1ecb281))
+* add types and aliases ([aea79f8](https://github.com/arindampradhan/admin-panel-next/commit/aea79f83733d666962b01ac3f9e4a2e72c7a03ae))
+
+
+### Bug Fixes
+
+* attempt at fixing type defination ([f929d3a](https://github.com/arindampradhan/admin-panel-next/commit/f929d3ab9e1889d13d9a52966ca11c40b5436eaf))
+* build issue, stablizing the build ([00d441b](https://github.com/arindampradhan/admin-panel-next/commit/00d441b26ac0ccc080dd44f98981766286d24c70))
+* button behaviour with rest props ([efc8750](https://github.com/arindampradhan/admin-panel-next/commit/efc8750042d09db99bd710024bc8b0d6321c8e4d))
+* package-ecosystem ([0293ccc](https://github.com/arindampradhan/admin-panel-next/commit/0293ccc58c86caf4731d70c348b54024c2e9680a))
+* remove console ([1531a14](https://github.com/arindampradhan/admin-panel-next/commit/1531a14b9c35e58e17b5b266759b1a34504f153b))
+* update readme ([1216119](https://github.com/arindampradhan/admin-panel-next/commit/12161192f67c510b439f7eace1e579ac344fe53a))
+
 ### [0.1.5](https://github.com/arindampradhan/admin-panel-next/compare/v0.1.4...v0.1.5) (2022-09-09)
 
 
