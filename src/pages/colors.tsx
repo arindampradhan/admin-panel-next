@@ -1,8 +1,8 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import ColorCard from '../components/Cards/ColorCard';
-import atlassian from '../lib/theme/atlassian.json';
+import ColorCard from '@/components/Cards/ColorCard';
+import atlassian from '@/lib/theme/atlassian.json';
 
 type PalletGroupsProps = {
   colors: string[];

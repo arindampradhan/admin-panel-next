@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-css-tags */
 import { Html, Head, Main, NextScript } from 'next/document';
 import React from 'react';
-import { BaseLayout } from '../components/Layouts/BaseLayout';
+import { BaseLayout } from '../components/Layouts';
 
 export default function Document() {
   return (
