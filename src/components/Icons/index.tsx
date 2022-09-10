@@ -1,11 +1,16 @@
 // icons used by the components
+
 import React from 'react';
-// import Account from './account.svg';
+import AccountIcon from './account.svg';
 
 type Props = {};
 
 function Account({}: Props) {
-  return <div>{/* <Account /> */}</div>;
+  return (
+    <div>
+      <AccountIcon />
+    </div>
+  );
 }
 
 export default Account;

@@ -1,10 +1,6 @@
 // more declarations
-declare module '*.svg' {
-  /**
-   * Use `any` to avoid conflicts with
-   * `@svgr/webpack` plugin or
-   * `babel-plugin-inline-react-svg` plugin.
-   */
+// FIXME: type defination not working
+declare module 'components/**/*.svg' {
   import React from 'react';
   const Component: React.FunctionComponent<React.SVGProps<SVGAElement>>;
   export default Component;

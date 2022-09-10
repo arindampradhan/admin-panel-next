@@ -18,12 +18,7 @@ const RootPage: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <button
-          type="button"
-          className="to-pink-500px-4 from-indigo-500 rounded-lg bg-gradient-to-r via-purple-500 py-2 "
-        >
-          Hover me
-        </button>
+        <h1 className="h-14">Home Page</h1>
       </main>
     </div>
   );
