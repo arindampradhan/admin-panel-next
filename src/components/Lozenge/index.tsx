@@ -34,7 +34,6 @@ const Lozenge: React.FC<LozengeProps> = ({
     movedBold: 'text-primarydark bg-yellow-700'
   };
   const key = `${appearance}${isBold ? 'Bold' : ''}`;
-  console.log(key);
 
   return (
     <span
