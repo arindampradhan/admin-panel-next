@@ -4,7 +4,7 @@ import React from 'react';
 
 type Props = {};
 
-function Account() {
+function Account({}: Props) {
   return <div>{/* <Account /> */}</div>;
 }
 

@@ -10,6 +10,16 @@ npm run dev
 yarn dev
 ```
 
+## Usage
+
+```bash
+# for inspecting the backend
+NODE_OPTIONS='--inspect' next dev
+
+# for anaylizing the build
+ANALYZE=true yarn build
+```
+
 ## Base features
 
 - prettier, eslint, lint-staged
