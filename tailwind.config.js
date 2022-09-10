@@ -2,6 +2,7 @@
 const colors = require('tailwindcss/colors');
 const defaultTheme = require('tailwindcss/defaultTheme');
 const atlasianColors = require('./src/lib/theme/atlassian.json');
+const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   content: [
@@ -43,5 +44,10 @@ module.exports = {
       purple: atlasianColors.purple
     }
   },
-  plugins: [require('@tailwindcss/typography')]
+  plugins: [
+    require('@tailwindcss/typography'),
+    plugin(({ addVariant }) => {
+      addVariant('not-last-after', '&::not(:last-child)::after');
+    })
+  ]
 };

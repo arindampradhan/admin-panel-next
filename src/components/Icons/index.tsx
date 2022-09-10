@@ -9,6 +9,11 @@ import OfflineIcon from './svgs/offline.svg';
 import ApprovedIcon from './svgs/approved.svg';
 import DeclinedIcon from './svgs/declined.svg';
 import LockedIcon from './svgs/locked.svg';
+import InformationIcon from './svgs/information.svg';
+import WarningIcon from './svgs/warning.svg';
+import ErrorIcon from './svgs/error.svg';
+import SuccessIcon from './svgs/success.svg';
+import DiscoveryIcon from './svgs/discovery.svg';
 
 type Props = {
   [x: string]: any;
@@ -44,4 +49,24 @@ export function Declined(props: Props) {
 
 export function Locked(props: Props) {
   return <LockedIcon {...props} />;
+}
+
+export function Information(props: Props) {
+  return <InformationIcon {...props} />;
+}
+
+export function Warning(props: Props) {
+  return <WarningIcon {...props} />;
+}
+
+export function Error(props: Props) {
+  return <ErrorIcon {...props} />;
+}
+
+export function Success(props: Props) {
+  return <SuccessIcon {...props} />;
+}
+
+export function Discovery(props: Props) {
+  return <DiscoveryIcon {...props} />;
 }

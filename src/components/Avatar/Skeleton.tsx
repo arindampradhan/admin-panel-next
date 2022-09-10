@@ -4,8 +4,8 @@ import { sizeBehaviour, appearanceBehaviour, opacityBehaviour } from './theme';
 type Props = {
   color?: string;
   appearance?: 'circle' | 'square';
-  size: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge';
-  weight: 'normal' | 'strong';
+  size?: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge';
+  weight?: 'normal' | 'strong';
 };
 
 export const Skeleton: React.FC<Props> = ({

@@ -14,7 +14,7 @@ type AvatarProps = {
   isDisabled?: boolean;
   name?: string;
   presence?: 'online' | 'busy' | 'focus' | 'offline';
-  size: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge';
+  size?: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge';
   src?: string;
   status?: 'approved' | 'declined' | 'locked';
   target?: '_blank' | '_self' | '_top' | '_parent';

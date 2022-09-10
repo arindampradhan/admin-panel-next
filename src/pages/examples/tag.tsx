@@ -1,8 +1,9 @@
+import type { NextPage } from 'next';
 import React from 'react';
-import Background from '../../components/Background';
-import { SimpleTag as Tag, TagGroup } from '../../components/Tag';
+import Background from '@/components/Background';
+import { SimpleTag as Tag, TagGroup } from '@/components/Tag';
 
-const DesignSystem = () => {
+const DesignSystem: NextPage = () => {
   return (
     <div>
       <Background className="bg-white">

@@ -1,8 +1,9 @@
+import type { NextPage } from 'next';
 import React, { useState } from 'react';
 import Background from '@/components/Background';
 import Button, { ButtonGroup } from '@/components/Button';
 
-const DesignSystem = () => {
+const DesignSystem: NextPage = () => {
   const [isExpanded, setExpanse] = useState(false);
 
   return (

@@ -1,8 +1,9 @@
+import type { NextPage } from 'next';
 import React, { useState } from 'react';
 import Background from '@/components/Background';
 import Progressbar from '@/components/Progressbar';
 
-const DesignSystem = () => {
+const DesignSystem: NextPage = () => {
   return (
     <>
       <Background>
