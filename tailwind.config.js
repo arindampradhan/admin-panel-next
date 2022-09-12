@@ -46,8 +46,8 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/typography'),
-    plugin(({ addVariant }) => {
-      addVariant('not-last-after', '&::not(:last-child)::after');
+    plugin(({ addVariant, e }) => {
+      addVariant('not-last', '&:not(:last-child)');
     })
   ]
 };

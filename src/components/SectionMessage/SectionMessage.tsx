@@ -86,7 +86,10 @@ export function SectionMessage({
         {actions ? (
           <ul className="mt-2 flex list-none flex-wrap pl-0">
             {actions.map((node, index) => (
-              <li key={index} className="m-0 flex items-center">
+              <li
+                key={index}
+                className="m-0 flex items-center after:inline-block after:w-4 after:text-center after:align-middle after:text-darkneutral-100 after:no-underline not-last:after:content-['·']"
+              >
                 {node}
               </li>
             ))}
