@@ -54,7 +54,7 @@ export const BreadcrumbsItem: React.FC<ItemsProps> = ({
   const content = text || children;
 
   return (
-    <li className='box-border flex h-7 max-w-full flex-row after:w-auto after:shrink-0 after:px-2 after:py-0 after:text-center after:no-underline after:content-["/"]'>
+    <li className='box-border flex h-7 max-w-full flex-row not-last:after:w-auto not-last:after:shrink-0 not-last:after:px-2 not-last:after:py-0 not-last:after:text-center not-last:after:no-underline not-last:after:content-["/"]'>
       {/* TODO: last element remove style of content */}
       <CustomTag
         style={{ maxWidth: `${truncationWidth}px` }}

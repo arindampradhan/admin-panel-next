@@ -14,6 +14,12 @@ module.exports = {
       sans: ['Chillax', ...defaultTheme.fontFamily.sans]
     },
     extend: {
+      boxShadow: {
+        outline: `0 0 0 2px var(--ds-border-focused, ${atlasianColors.blue[300]}) inset`
+      },
+      width: {
+        inherit: 'inherit'
+      },
       flex: {
         0: '0 0 auto'
       },

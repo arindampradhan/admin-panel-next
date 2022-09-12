@@ -1,6 +1,7 @@
 import React from 'react';
 import { Approved, Declined, Locked } from '@/components/Icons/index';
 
+// TODO: for different sizes
 type Props = {
   children?: React.ReactNode;
   borderColor?: string;

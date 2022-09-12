@@ -1,11 +1,11 @@
 import type { NextPage } from 'next';
-import React from 'react';
+import { useState } from 'react';
 import Background from '@/components/Background';
 
 const DesignSystem: NextPage = () => {
   return (
     <>
-      <Background background="white">section message</Background>
+      <Background background="white"></Background>
     </>
   );
 };

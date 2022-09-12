@@ -14,7 +14,7 @@ type ButtonGroupProps = {
 
 export const ButtonGroup: React.FC<ButtonGroupProps> = ({
   children,
-  appearance = 'default'
+  appearance
 }) => {
   return (
     <div className="inline-flex gap-1">
