@@ -1,13 +1,14 @@
 import type { NextPage } from 'next';
-import React, { Component } from 'react';
 import Background from '@/components/Background';
-import Button from '@/components/Button';
-import ProgressIndicator from '@/components/ProgressIndicator';
+import Pagination from '@/components/Pagination';
 
 const DesignSystem: NextPage = () => {
   return (
     <Background background="white ">
-      <h1>hello</h1>
+      <Pagination
+        defaultSelectedIndex={3}
+        pages={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+      />
     </Background>
   );
 };
