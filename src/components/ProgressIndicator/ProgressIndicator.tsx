@@ -1,5 +1,17 @@
-import React, { SyntheticEvent } from 'react';
-import Button from '@/components/Button';
+import React, {
+  SyntheticEvent,
+  MutableRefObject,
+  useCallback,
+  useEffect,
+  useRef
+} from 'react';
+import {
+  appearanceBehaviour,
+  selectedAppearanceBehaviour,
+  sizesBehaviour,
+  spacingDivisionBehaviour
+} from './theme';
+import bind from '@/lib/bind';
 
 type eventData = {
   event: SyntheticEvent;
@@ -13,6 +25,8 @@ type ProgressIndicatorProps = {
   onSelect?: (e: eventData) => void;
   size?: 'small' | 'default' | 'large';
   spacing?: 'comfortable' | 'cozy' | 'compact';
+  ariaControls?: string;
+  ariaLabel?: string;
 };
 
 const ProgressIndicator: React.FC<ProgressIndicatorProps> = ({
@@ -21,54 +35,99 @@ const ProgressIndicator: React.FC<ProgressIndicatorProps> = ({
   appearance = 'default',
   size = 'default',
   spacing = 'comfortable',
-  onSelect
+  onSelect,
+  ariaControls = 'panel',
+  ariaLabel = 'tab'
 }) => {
-  const appearanceBehaviour = {
-    default: 'bg-lightneutral-600',
-    help: 'bg-purple-200',
-    inverted: 'bg-white/40',
-    primary: 'bg-blue-200'
-  };
-
-  const selectedAppearanceBehaviour = {
-    default: 'bg-darkneutral-500',
-    help: 'bg-purple-600',
-    inverted: 'bg-white',
-    primary: 'bg-blue-600'
-  };
-
-  const sizesBehaviour = {
-    small: 'h-1 w-1',
-    default: 'h-2 w-2',
-    large: 'h-3 w-3'
-  };
-
-  const spacingDivisionBehaviour = {
-    comfortable: 'before:left-[-4px] before:top-[-4px] before:h-4 before:w-4',
-    cozy: 'before:left-[-2px] before:top-[-2px] before:h-4 before:w-[2px]',
-    compact: 'before:left-[-1px] before:top-[-1px] before:h-4 before:w-[2px]'
-  };
-
   const isSelectAvailable = !!onSelect;
+  const tablistRef: MutableRefObject<HTMLDivElement | null> =
+    useRef<HTMLDivElement>(null);
+
+  // FIXME: focus css not working
+  const handleKeyDown = useCallback(
+    (event: KeyboardEvent) => {
+      const indicators = Array.from(
+        tablistRef.current!.children
+      ) as HTMLButtonElement[];
+
+      // bail if the target isn't an indicator
+      if (!indicators.includes(event.target as HTMLButtonElement)) {
+        return;
+      }
+
+      // bail if not valid arrow key
+      const isLeft = event.key === 'ArrowLeft';
+      const isRight = event.key === 'ArrowRight';
+      if (!isLeft && !isRight) {
+        return;
+      }
+
+      // bail if at either end of the values
+      const isAlpha = isLeft && selectedIndex === 0;
+      const isOmega = isRight && selectedIndex === values.length - 1;
+      if (isAlpha || isOmega) {
+        return;
+      }
+
+      const index = isLeft ? selectedIndex - 1 : selectedIndex + 1;
+
+      // call the consumer's select method and focus the applicable indicator
+      if (onSelect) {
+        onSelect({
+          event: event as unknown as React.MouseEvent<HTMLButtonElement>,
+          index
+        });
+      }
+
+      if (typeof indicators[index].focus === 'function') {
+        indicators[index].focus();
+      }
+    },
+    [selectedIndex, values, onSelect]
+  );
+
+  useEffect(() => {
+    if (!onSelect) {
+      return null;
+    }
+    return bind(document, {
+      type: 'keydown',
+      listener: handleKeyDown,
+      options: { capture: false }
+    });
+  }, [onSelect, handleKeyDown]);
 
   return (
-    <div role="tablist" className="flex justify-center gap-2">
-      {values.map((value, index) => (
-        <div
-          key={index}
-          role="presentation"
-          onClick={event =>
-            isSelectAvailable ? onSelect({ event, index }) : null
-          }
-          className={`relative rounded-full before:absolute before:block before:content-[''] ${
-            isSelectAvailable ? 'cursor-pointer' : ''
-          } ${spacingDivisionBehaviour[spacing]} ${sizesBehaviour[size]} ${
-            selectedIndex === index
-              ? selectedAppearanceBehaviour[appearance]
-              : appearanceBehaviour[appearance]
-          }`}
-        />
-      ))}
+    <div
+      ref={r => {
+        tablistRef.current = r;
+      }}
+      role="tablist"
+      className="flex justify-center gap-2"
+    >
+      {values.map((value, index) => {
+        const isSelected = selectedIndex === index;
+        const tabId = `${ariaLabel}${index}`;
+        const panelId = `${ariaControls}${index}`;
+
+        return (
+          <div
+            tabIndex={isSelected ? 0 : -1}
+            key={index}
+            role="presentation"
+            onClick={event =>
+              isSelectAvailable ? onSelect({ event, index }) : null
+            }
+            className={`relative rounded-full before:absolute before:block before:content-[''] ${
+              isSelectAvailable ? 'cursor-pointer' : ''
+            } ${spacingDivisionBehaviour[spacing]} ${sizesBehaviour[size]} ${
+              isSelected
+                ? selectedAppearanceBehaviour[appearance]
+                : appearanceBehaviour[appearance]
+            }`}
+          />
+        );
+      })}
     </div>
   );
 };
