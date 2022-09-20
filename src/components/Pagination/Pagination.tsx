@@ -1,4 +1,4 @@
-import { forwardRef, memo, SyntheticEvent, useState } from 'react';
+import { useEffect, SyntheticEvent, useState, useCallback } from 'react';
 import { Button } from '@/components/Button';
 import { Left, Right } from '@/components/Icons';
 import CollapseRange from './CollapseRange';
@@ -33,6 +33,11 @@ export function Pagination({
     setactiveIndex(activeIndex);
     onChange(activeIndex);
   };
+
+  useEffect(() => {
+    handleChange(defaultSelectedIndex);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [defaultSelectedIndex]);
 
   const isFirst = activeIndex === 0;
   const isLast = activeIndex === pages?.length - 1;
