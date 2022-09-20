@@ -1,12 +1,16 @@
 import type { NextPage } from 'next';
 import { useState } from 'react';
 import Background from '@/components/Background';
+import Pagination from '@/components/Pagination';
 
 const DesignSystem: NextPage = () => {
   return (
-    <>
-      <Background background="white"></Background>
-    </>
+    <Background background="white ">
+      <Pagination
+        defaultSelectedIndex={5}
+        pages={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+      />
+    </Background>
   );
 };
 

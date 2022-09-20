@@ -21,6 +21,7 @@ type ButtonProps = {
   className?: string;
   shouldFitContainer?: boolean;
   [rest: string]: any;
+  isDisabled?: boolean;
 };
 
 export const Button: React.FC<ButtonProps> = ({
@@ -31,12 +32,19 @@ export const Button: React.FC<ButtonProps> = ({
   className = '',
   spacing = 'default',
   shouldFitContainer = false,
+  isDisabled = false,
   ...rest
 }) => {
   const spacingBehaviour = {
     default: 'px-3 leading-9',
     compact: 'px-2 leading-7',
     none: 'px-0 leading-5'
+  };
+
+  const textSpacingBehaviour = {
+    default: 'mx-1',
+    compact: 'mx-[2px]',
+    none: 'mx-0'
   };
 
   const containerBehaviour = {
@@ -46,7 +54,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   const Text: React.FC<TypeProps> = ({ children }) => (
     <span
-      className={`mx-1 flex-shrink flex-grow overflow-hidden text-ellipsis whitespace-nowrap text-center transition-opacity ${textBehaviour[appearance]}`}
+      className={`flex-shrink flex-grow overflow-hidden text-ellipsis whitespace-nowrap text-center transition-opacity ${textBehaviour[appearance]} ${textSpacingBehaviour[spacing]}`}
     >
       {children}
     </span>
@@ -57,6 +65,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
+      disabled={isDisabled}
       className={`inline-flex cursor-pointer items-baseline rounded-[3px] border-0 text-center align-middle font-normal  transition-all ${disabledClass} ${className} ${spacingBehaviour} ${
         spacingBehaviour[spacing]
       } ${

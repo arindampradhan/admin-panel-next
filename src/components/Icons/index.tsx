@@ -14,6 +14,8 @@ import WarningIcon from './svgs/warning.svg';
 import ErrorIcon from './svgs/error.svg';
 import SuccessIcon from './svgs/success.svg';
 import DiscoveryIcon from './svgs/discovery.svg';
+import RightIcon from './svgs/right.svg';
+import LeftIcon from './svgs/left.svg';
 
 type Props = {
   [x: string]: any;
@@ -69,4 +71,11 @@ export function Success(props: Props) {
 
 export function Discovery(props: Props) {
   return <DiscoveryIcon {...props} />;
+}
+
+export function Left(props: Props) {
+  return <LeftIcon {...props} />;
+}
+export function Right(props: Props) {
+  return <RightIcon {...props} />;
 }
