@@ -23,3 +23,6 @@ export const spacingDivisionBehaviour = {
   cozy: 'before:left-[-2px] before:top-[-2px] before:h-4 before:w-[2px]',
   compact: 'before:left-[-1px] before:top-[-1px] before:h-4 before:w-[2px]'
 };
+
+export const focusRingBehaviour =
+  'focus-visible:outline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-300';

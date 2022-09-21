@@ -10,10 +10,10 @@ import { TabListContext, TabPanelContext } from './internal/context';
 type TabProps = {
   children: ReactNode[];
   defaultSelected?: number;
-  onChange?: () => void;
+  onChange?: (index: number) => void;
   selected?: number;
   shouldUnmountTabPanelOnChange?: boolean;
-  id?: number;
+  id?: number | string;
 };
 
 const getTabPanelWithContext = ({
@@ -25,7 +25,7 @@ const getTabPanelWithContext = ({
   tabPanel?: ReactNode;
   isSelected: boolean;
   index: number;
-  tabsId: string;
+  tabsId: string | number;
 }) =>
   // Ensure tabPanel exists in case it has been removed
   tabPanel && (
@@ -57,7 +57,7 @@ export const Tabs: React.FC<TabProps> = ({
 
   const selected = selectedProp === undefined ? selectedState : selectedProp;
   const childrenArray = Children.toArray(children).filter(Boolean);
-  const visited = useRef<Set<SelectedType>>(new Set([selected]));
+  const visited = useRef<Set<any>>(new Set([selected]));
 
   const [tabList, ...tabPanels] = childrenArray;
 

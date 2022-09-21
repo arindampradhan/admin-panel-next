@@ -3,10 +3,10 @@ import { useTab } from './internal/hooks';
 
 type TabProps = {
   children: React.ReactNode;
-  index: number;
+  index?: number;
 };
 
-export const Tab: React.FC<TabProps> = ({ children }) => {
+export const Tab: React.FC<TabProps> = ({ children, index }) => {
   const isActive = false;
   const isActiveClass = isActive
     ? "after:content-[''] after:rounded-sm after:bottom-0 after:m-0 after:absolute after:w-inherit after:left-2 after:right-2 after:border-b-2 after:border-solid after:border-primary"

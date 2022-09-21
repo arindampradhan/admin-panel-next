@@ -11,7 +11,8 @@ type FlagProps = {
   linkComponent: React.ReactNode;
 };
 
-function Flag({ title }: FlagProps) {
+// TODO : add flag data
+function Flag({ title, icon, description }: FlagProps) {
   return (
     <div className="box-border w-full rounded-[3px] p-4">
       <div className="flex items-start text-darkneutral-100">

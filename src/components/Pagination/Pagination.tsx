@@ -6,7 +6,7 @@ import CollapseRange from './CollapseRange';
 type Props = {
   pages: number[];
   defaultSelectedIndex?: number;
-  getPageLabel: () => void;
+  getPageLabel?: (any) => void;
   label?: string;
   nextLabel?: string;
   previousLabel?: string;

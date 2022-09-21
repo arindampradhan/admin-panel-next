@@ -5,7 +5,7 @@ type EllipsisProps = {
 };
 
 export const Ellipsis: React.FC<EllipsisProps> = ({ uid = null }) => (
-  <span uid={uid} className="inline-flex h-8 items-center px-0 text-center">
+  <span id={uid} className="inline-flex h-8 items-center px-0 text-center">
     ...
   </span>
 );

@@ -9,7 +9,8 @@ import {
   appearanceBehaviour,
   selectedAppearanceBehaviour,
   sizesBehaviour,
-  spacingDivisionBehaviour
+  spacingDivisionBehaviour,
+  focusRingBehaviour
 } from './theme';
 import bind from '@/lib/bind';
 
@@ -79,8 +80,8 @@ const ProgressIndicator: React.FC<ProgressIndicatorProps> = ({
         });
       }
 
-      if (typeof indicators[index].focus === 'function') {
-        indicators[index].focus();
+      if (typeof indicators[index]?.focus === 'function') {
+        indicators[index]?.focus();
       }
     },
     [selectedIndex, values, onSelect]
@@ -118,7 +119,7 @@ const ProgressIndicator: React.FC<ProgressIndicatorProps> = ({
             onClick={event =>
               isSelectAvailable ? onSelect({ event, index }) : null
             }
-            className={`relative rounded-full before:absolute before:block before:content-[''] ${
+            className={`before:content-[' '] relative rounded-full before:absolute  before:block ${focusRingBehaviour}  ${
               isSelectAvailable ? 'cursor-pointer' : ''
             } ${spacingDivisionBehaviour[spacing]} ${sizesBehaviour[size]} ${
               isSelected

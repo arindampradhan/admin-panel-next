@@ -56,6 +56,7 @@ class Example extends Component<ExampleProps, State> {
           Prev
         </Button>
         <ProgressIndicator
+          spacing='comfortable'
           selectedIndex={selectedIndex}
           values={values}
           onSelect={this.handleSelect}

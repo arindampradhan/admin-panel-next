@@ -13,8 +13,8 @@ type PageComponentProps = {
   pages: number[];
   startIndex: number;
   lastIndex: number;
-  activeIndex: number;
-  handleChange: any;
+  activeIndex?: number;
+  handleChange?: any;
 };
 
 const PageComponent = memo(function PageComponent({
