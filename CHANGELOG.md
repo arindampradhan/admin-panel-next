@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.7](https://github.com/arindampradhan/admin-panel-next/compare/v0.1.6...v0.1.7) (2022-09-21)
+
+
+### Features
+
+* add not-last selector ([5891017](https://github.com/arindampradhan/admin-panel-next/commit/5891017320ad795e1f96c182fe7e14ecaf3e3b61))
+* add pagination ([52ee728](https://github.com/arindampradhan/admin-panel-next/commit/52ee728a9db2156b71af312748fe5e2346658e87))
+* add progress indicator ([e418cbe](https://github.com/arindampradhan/admin-panel-next/commit/e418cbedb1b0121ccb5bd2b896c0dc0b40493467))
+* landing page design ([58cc92e](https://github.com/arindampradhan/admin-panel-next/commit/58cc92e1b945cbef1f322206b5a75f9d1b42fde2))
+
+
+### Bug Fixes
+
+* add progress indicator binding ([6fa4870](https://github.com/arindampradhan/admin-panel-next/commit/6fa4870e7468023b419f8b62180be0ce66815996))
+* build issues and add focus ring to the progress indicator ([434fc35](https://github.com/arindampradhan/admin-panel-next/commit/434fc352b6feb5b117f26a38aad8a25bf2e3c217))
+* prop listner ([b8121bc](https://github.com/arindampradhan/admin-panel-next/commit/b8121bc86bce3be9e2a3868ae94d6d65152ecf1e))
+* remove editor ([9ccbe0f](https://github.com/arindampradhan/admin-panel-next/commit/9ccbe0f0e199473ce20914828bda2e0aa583ec99))
+
 ### [0.1.6](https://github.com/arindampradhan/admin-panel-next/compare/v0.1.4...v0.1.6) (2022-09-10)
 
 
